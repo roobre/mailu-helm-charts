@@ -19,9 +19,6 @@ spec:
     type: RollingUpdate
     rollingUpdate:
       maxUnavailable: 1
-      {{- if eq .Values.front.controller.kind "Deployment" }}
-      maxSurge: 0
-      {{- end }}
   template:
     metadata:
       labels:
