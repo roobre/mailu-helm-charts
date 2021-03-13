@@ -20,6 +20,8 @@
 #  domain: mydomain.com
 #  password: chang3m3!
 
+# Name visible in the webUI
+siteName: Mailu
 
 nameOverride: ""
 fullnameOverride: ""
