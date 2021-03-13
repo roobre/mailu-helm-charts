@@ -1,11 +1,14 @@
 # Default values for mailu.
 
-# A list of mail hostnames is required. The first will be used as primary mail hostname
+# A list of mail hostnames where the is required. The first will be used as primary mail hostname.
+# These will be the hostnames to which both the WebUI and the mail services will expect clients to connect to
 #hostnames:
 #  - mail.example.com
 #  - imap.example.com
 
-# The mail domain is required. See https://github.com/Mailu/Mailu/blob/master/docs/faq.rst#what-is-the-difference-between-domain-and-hostnames
+# The mail domain is required, will be the part after the @ in the email addresses.
+# More domains can be added later in the WebUI
+# See https://github.com/Mailu/Mailu/blob/master/docs/faq.rst#what-is-the-difference-between-domain-and-hostnames
 #domain: example.com
 
 # The secret key is required for protecting authentication cookies and must be set individually for each deployment
