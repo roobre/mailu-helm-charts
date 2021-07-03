@@ -115,6 +115,8 @@ front:
   externalService:
     enabled: false
     type: ClusterIP
+    #externalTrafficPolicy: "Local"
+    #loadBalancerIP: 192.168.0.1
     annotations: {}
     pop3:
       pop3: false
