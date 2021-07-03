@@ -228,6 +228,12 @@ metadata:
   {{- end }}
 spec:
   type: {{ .type | default "ClusterIP" }}
+  {{- if eq .type "LoadBalancer" }}
+  {{- if .loadBalancerIP }}
+  loadBalancerIP: {{ .loadBalancerIP }}
+  {{- end }}
+  externalTrafficPolicy: {{ default "Cluster" .externalTrafficPolicy }}
+  {{- end }}
   selector:
     app: {{ include "mailu.fullname" $ }}
     component: front
